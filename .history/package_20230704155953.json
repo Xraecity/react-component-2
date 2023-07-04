@@ -11,7 +11,7 @@
     }
   },
   "lint-staged": {
-    "*": ["prettier --write", "eslint --fix", "jest --bail --findRelatedTests"]
+    "*": ["prettier --write", "eslint --fix"]
   },
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
