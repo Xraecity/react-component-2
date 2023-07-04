@@ -12,9 +12,7 @@
     "build-storybook": "storybook build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "lint-staged": "lint-staged --config lint-staged.js",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "husky-install": "husky install"
+    "format":"prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "author": "Maryam Gambo",
   "license": "ISC",
@@ -51,11 +49,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
-    "husky": "^8.0.3",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "jest-styled-components": "^7.1.1",
-    "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -65,7 +61,6 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^7.0.20",
     "styled-components": "^5.3.10",
-    "tsc-files": "^1.1.4",
     "typescript": "^5.1.6"
   },
   "peerDependencies": {
