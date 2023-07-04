@@ -13,20 +13,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint-staged": "lint-staged --config lint-staged.js",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'Pre-commit hook executed'"
-    }
-  },
-  "lint-staged": {
-    "*": [
-      "prettier --write",
-      "eslint --fix",
-      "jest --bail --findRelatedTests"
-    ]
-  },
+  "husky": {},
   "author": "Maryam Gambo",
   "license": "ISC",
   "devDependencies": {

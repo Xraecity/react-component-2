@@ -21,11 +21,9 @@
     }
   },
   "lint-staged": {
-    "*": [
-      "prettier --write",
-      "eslint --fix",
-      "jest --bail --findRelatedTests"
-    ]
+    "*": ["prettier --write",
+          "eslint --fix",
+          "jest --bail --findRelatedTests"]
   },
   "author": "Maryam Gambo",
   "license": "ISC",

@@ -17,15 +17,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'Pre-commit hook executed'"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*": [
-      "prettier --write",
-      "eslint --fix",
-      "jest --bail --findRelatedTests"
-    ]
+    "*": ["prettier --write",
+          "eslint --fix",
+          "jest --bail --findRelatedTests"]
   },
   "author": "Maryam Gambo",
   "license": "ISC",
