@@ -20,9 +20,6 @@ Default.args = {
   backgroundColor: "#1b116e",
 };
 
-
-
-
 export const Disabled: Story = (args) => (
   <Text data-testId="InputField-id" {...args} />
 );

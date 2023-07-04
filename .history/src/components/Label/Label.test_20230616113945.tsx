@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 import Label from "./Label";
 
 describe("Tests for the Label Component", () => {
@@ -11,9 +11,7 @@ describe("Tests for the Label Component", () => {
   });
 
   test("changes background color when disabled", () => {
-    const { getByText } = render(
-      <Label disabled>Disabled Label</Label>
-    );
+    const { getByText } = render(<Label disabled>Disabled Label</Label>);
     const labelElement = getByText("Disabled Label");
     expect(labelElement).toHaveStyle("color: #cccccc");
   });

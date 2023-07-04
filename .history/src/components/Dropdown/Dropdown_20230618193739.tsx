@@ -10,15 +10,13 @@ const StyledDropdown = styled.select<DropdownProps>`
   color: #000;
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
 `;
 
 const Dropdown: React.FC<DropdownProps> = (props) => {
- const{ options,
-  defaultValue,
-  backgroundColor,
-  disabled} = props;
+  const { options, defaultValue, backgroundColor, disabled } = props;
 
   return (
     <StyledDropdown

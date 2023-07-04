@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { TableProps } from "./Table.types";
 
-
-
 const StyledTable = styled.table<TableProps>`
   width: 50%;
   border-collapse: collapse;
@@ -12,7 +10,8 @@ const StyledTable = styled.table<TableProps>`
     props.disabled ? "#cccccc" : props.backgroundColor};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "default")};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
 `;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Table from "./Table";
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 describe("Tests for Table Component", () => {
   test("Button should be visible", () => {

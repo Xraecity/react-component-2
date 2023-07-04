@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { TableProps } from "./Table.types";
 
-
-
 const StyledTable = styled.table<TableProps>`
   width: 100%;
   border-collapse: collapse;

@@ -28,7 +28,6 @@ Customized.args = {
   text: "Customized text",
 };
 
-
 export const Disabled: Story = (args) => (
   <Text data-testId="InputField-id" {...args} />
 );

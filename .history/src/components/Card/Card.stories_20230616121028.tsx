@@ -18,9 +18,7 @@ Default.args = {
   disabled: false,
   text: "Card Details",
   backgroundColor: "#55bd90",
-
 };
-
 
 export const Disabled: Story = (args) => (
   <Card data-testId="InputField-id" {...args} />
@@ -29,4 +27,3 @@ Disabled.args = {
   disabled: true,
   text: "Disabled",
 };
-

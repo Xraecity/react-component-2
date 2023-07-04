@@ -19,9 +19,7 @@ Default.args = {
   altText: "Example Image",
   disabled: false,
   backgroundColor: "#55bd90",
-
 };
-
 
 export const Disabled: Story = (args) => (
   <HeroImage data-testId="InputField-id" {...args} />

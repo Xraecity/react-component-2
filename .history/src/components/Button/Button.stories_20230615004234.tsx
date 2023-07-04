@@ -18,7 +18,6 @@ Primary.args = {
   primary: true,
   disabled: false,
   text: "Primary",
-
 };
 
 export const Secondary: Story = (args) => (

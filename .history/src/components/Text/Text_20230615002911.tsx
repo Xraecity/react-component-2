@@ -17,7 +17,7 @@ const StyledText = styled.text<TextProps>`
       : props.size === "medium"
       ? "9px 30px 11px"
       : "14px 30px 16px"};
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : "#6bedb5" )};
+  background-color: ${(props) => (props.disabled ? "#cccccc" : "#6bedb5")};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
@@ -31,11 +31,7 @@ const Text: React.FC<TextProps> = ({
   ...props
 }) => {
   return (
-    <StyledText
-      onClick={onClick}
-      disabled={disabled}
-      size={size}
-      {...props}>
+    <StyledText onClick={onClick} disabled={disabled} size={size} {...props}>
       {text}
     </StyledText>
   );

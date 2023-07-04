@@ -18,7 +18,8 @@ const StyledHeroImage = styled.img<StyledHeroImageProps>`
 `;
 
 const StyledWrapper = styled.div<StyledHeroImageProps>`
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,15 +32,18 @@ const HeroImage: React.FC<HeroImageProps> = ({
   disabled,
 }) => {
   return (
-    <StyledWrapper backgroundColor={backgroundColor} data-testid="hero-image-wrapper">
-      {headerText && <HeaderText>{headerText}</HeaderText>}
-    <StyledHeroImage
-      src={imageUrl}
-      alt={altText}
+    <StyledWrapper
       backgroundColor={backgroundColor}
-      disabled={disabled}
-    />
-  </StyledWrapper>
+      data-testid="hero-image-wrapper"
+    >
+      {headerText && <HeaderText>{headerText}</HeaderText>}
+      <StyledHeroImage
+        src={imageUrl}
+        alt={altText}
+        backgroundColor={backgroundColor}
+        disabled={disabled}
+      />
+    </StyledWrapper>
   );
 };
 

@@ -12,8 +12,9 @@ const StyledLabel = styled.label<LabelProps>`
   border-radius: 3px;
   display: inline-block;
   padding: ;
-  color: ${(props) => (props? "#ffffff" : "#ffffff")};
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
+  color: ${(props) => (props ? "#ffffff" : "#ffffff")};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
 `;
@@ -23,13 +24,14 @@ const Label: React.FC<LabelProps> = ({
   text,
   disabled,
   backgroundColor,
-   ...props
-  }) => {
-   return (
+  ...props
+}) => {
+  return (
     <StyledLabel
       disabled={disabled}
       backgroundColor={backgroundColor}
-      {...props}>
+      {...props}
+    >
       {children}
       {text}
     </StyledLabel>

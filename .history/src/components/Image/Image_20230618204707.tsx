@@ -29,13 +29,16 @@ const Image: React.FC<ImageProps> = ({
   disabled,
 }) => {
   return (
-    <StyledWrapper backgroundColor={backgroundColor} data-testid="hero-image-wrapper">
-    <StyledImage
-      src={imageUrl}
-      alt={altText}
+    <StyledWrapper
       backgroundColor={backgroundColor}
-      disabled={disabled}
-    />
+      data-testid="hero-image-wrapper"
+    >
+      <StyledImage
+        src={imageUrl}
+        alt={altText}
+        backgroundColor={backgroundColor}
+        disabled={disabled}
+      />
     </StyledWrapper>
   );
 };

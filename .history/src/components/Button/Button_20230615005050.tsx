@@ -18,7 +18,8 @@ const StyledButton = styled.button<ButtonProps>`
       ? "9px 30px 11px"
       : "14px 30px 16px"};
   color: ${(props) => (props.primary ? "#ffffff" : "#ffffff")};
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
@@ -53,7 +54,8 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       backgroundColor={backgroundColor}
       size={size}
-      {...props}>
+      {...props}
+    >
       {text}
     </StyledButton>
   );

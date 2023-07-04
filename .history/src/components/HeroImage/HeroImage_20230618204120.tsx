@@ -14,7 +14,8 @@ const StyledHeroImage = styled.img<StyledHeroImageProps>`
     props.disabled ? "#cccccc" : props.backgroundColor};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "default")};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
 `;
 
@@ -32,14 +33,17 @@ const HeroImage: React.FC<HeroImageProps> = ({
   disabled,
 }) => {
   return (
-    <StyledWrapper backgroundColor={backgroundColor} data-testId="hero-image-wrapper">
-    <StyledHeroImage
-      src={imageUrl}
-      alt={altText}
+    <StyledWrapper
       backgroundColor={backgroundColor}
-      disabled={disabled}
-    />
-  </StyledWrapper>
+      data-testId="hero-image-wrapper"
+    >
+      <StyledHeroImage
+        src={imageUrl}
+        alt={altText}
+        backgroundColor={backgroundColor}
+        disabled={disabled}
+      />
+    </StyledWrapper>
   );
 };
 

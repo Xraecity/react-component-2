@@ -1,11 +1,16 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import HeroImage from "./HeroImage";
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 describe("HeroImage Component", () => {
   test("should be visible", () => {
-    render(<HeroImage imageUrl="https://example.com/image.jpg" altText="Example Image" />);
+    render(
+      <HeroImage
+        imageUrl="https://example.com/image.jpg"
+        altText="Example Image"
+      />,
+    );
     const imageElement = screen.getByAltText("Example Image");
     expect(imageElement).toBeVisible();
   });
@@ -17,7 +22,7 @@ describe("HeroImage Component", () => {
         altText="Example Image"
         disabled
         backgroundColor="#cccccc"
-      />
+      />,
     );
     const imageElement = screen.getByAltText("Example Image");
     expect(imageElement).toHaveStyle("background-color: #cccccc");

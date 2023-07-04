@@ -1,6 +1,6 @@
 export interface RadioButtonProps {
   children: React.ReactNode;
   backgroundColor?: string;
-  text?:string;
+  text?: string;
   disabled?: boolean;
 }

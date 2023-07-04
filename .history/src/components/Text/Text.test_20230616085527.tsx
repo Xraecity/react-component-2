@@ -1,28 +1,18 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 import Text from "./Text";
 
 describe("TextComponent", () => {
   test("renders the text correctly and is visible", () => {
-    const { getByText } = render(
-      <Text
-        text="Test Text"
-        disabled={false}
-      />
-    );
+    const { getByText } = render(<Text text="Test Text" disabled={false} />);
     const textElement = getByText("Test Text");
     expect(textElement).toBeInTheDocument();
   });
 
   test("changes background color when disabled", () => {
-    const { getByText } = render(
-      <Text
-        text="Test Text"
-        disabled={true}
-      />
-    );
+    const { getByText } = render(<Text text="Test Text" disabled={true} />);
     const textElement = getByText("Test Text");
     expect(textElement).toHaveStyle("background-color: #cccccc");
   });

@@ -13,11 +13,13 @@ const StyledImage = styled.img<StyledImageProps>`
   cursor: ${(props) => (props.disabled ? "not-allowed" : "default")};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
-  background-color: ${(props) => (props.disabled ? "#cccccc" : props.backgroundColor)};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
 `;
 
 const StyledWrapper = styled.div<StyledImageProps>`
-  background-color: ${(props) => (props.disabled ? "#cccccc" : props.backgroundColor)};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,15 +39,17 @@ const Image: React.FC<ImageProps> = ({
   headerText,
 }) => {
   return (
-
-    <StyledWrapper backgroundColor={backgroundColor} data-testid="image-wrapper">
+    <StyledWrapper
+      backgroundColor={backgroundColor}
+      data-testid="image-wrapper"
+    >
       <StyledImage
         src={imageUrl}
         alt={altText}
         backgroundColor={backgroundColor}
         disabled={disabled}
       />
-         {headerText && <HeaderText>{headerText}</HeaderText>}
+      {headerText && <HeaderText>{headerText}</HeaderText>}
     </StyledWrapper>
   );
 };

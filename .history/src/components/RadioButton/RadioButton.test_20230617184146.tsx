@@ -11,7 +11,8 @@ const StyledRadioButton = styled.button<RadioButtonProps>`
   font-weight: bold;
   border-radius: 3px;
   display: inline-block;
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
@@ -29,7 +30,8 @@ const RadioButton: React.FC<RadioButtonProps> = ({
       disabled={disabled}
       backgroundColor={backgroundColor}
       size={size}
-      {...props}>
+      {...props}
+    >
       {text}
     </StyledButton>
   );

@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
-    "test":"jest"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -33,8 +33,6 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "types": "dist/index.d.ts"
 }

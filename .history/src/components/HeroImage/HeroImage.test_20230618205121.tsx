@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import HeroImage from "./HeroImage";
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 describe("Tests for thr HeroImage Component", () => {
   test(" HeroImage should be visible", () => {
@@ -19,7 +19,7 @@ describe("Tests for thr HeroImage Component", () => {
         altText="Example Image"
         disabled
         backgroundColor="#cccccc"
-      />
+      />,
     );
     const imageElement = screen.getByAltText("Example Image");
     const divElement = screen.getByTestId("hero-image-wrapper");

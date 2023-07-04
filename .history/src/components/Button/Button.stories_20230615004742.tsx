@@ -19,9 +19,7 @@ Primary.args = {
   disabled: false,
   text: "Primary",
   backgroundColor: "#55bd90",
-
 };
-
 
 export const Disabled: Story = (args) => (
   <Button data-testId="InputField-id" {...args} />

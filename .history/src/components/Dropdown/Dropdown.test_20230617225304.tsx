@@ -1,33 +1,32 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
-import Dropdown from './Dropdown';
+import Dropdown from "./Dropdown";
 
-describe('Tests for Dropdown component', () => {
-
-  test('Dropdown should be visible', () => {
+describe("Tests for Dropdown component", () => {
+  test("Dropdown should be visible", () => {
     const options = [
-      { value: 'option1', label: 'Option 1' },
-      { value: 'option2', label: 'Option 2' },
-      { value: 'option3', label: 'Option 3' },
+      { value: "option1", label: "Option 1" },
+      { value: "option2", label: "Option 2" },
+      { value: "option3", label: "Option 3" },
     ];
     const { getByText } = render(<Dropdown options={options} />);
-    const dropdownElement = getByText('Option 1');
+    const dropdownElement = getByText("Option 1");
     expect(dropdownElement).toBeVisible();
   });
 
-  test('Dropdown should change background color when disabled', () => {
+  test("Dropdown should change background color when disabled", () => {
     const options = [
-      { value: 'option1', label: 'Option 1' },
-      { value: 'option2', label: 'Option 2' },
+      { value: "option1", label: "Option 1" },
+      { value: "option2", label: "Option 2" },
     ];
 
-    const { getByText } = render(<Dropdown options={options} defaultValue='Option 1' disabled />);
-    const dropdown =  getByTestId('Dropdown-id') as HTMLElement;
+    const { getByText } = render(
+      <Dropdown options={options} defaultValue="Option 1" disabled />,
+    );
+    const dropdown = getByTestId("Dropdown-id") as HTMLElement;
 
-
-    expect(dropdown).toHaveStyle('background-color: #cccccc');
+    expect(dropdown).toHaveStyle("background-color: #cccccc");
   });
-
 });

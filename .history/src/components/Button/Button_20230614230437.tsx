@@ -49,7 +49,8 @@ const Button: React.FC<ButtonProps> = ({
       primary={primary}
       disabled={disabled}
       size={size}
-      {...props}>
+      {...props}
+    >
       {text}
     </StyledButton>
   );

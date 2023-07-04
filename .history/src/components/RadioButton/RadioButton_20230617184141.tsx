@@ -6,9 +6,18 @@ const StyledRadioButton = styled.div<RadioButtonProps>`
   /* Add your styling here */
 `;
 
-const RadioButton: React.FC<RadioButtonProps> = ({ text, backgroundColor, disabled, ...props }) => {
+const RadioButton: React.FC<RadioButtonProps> = ({
+  text,
+  backgroundColor,
+  disabled,
+  ...props
+}) => {
   return (
-    <StyledRadioButton backgroundColor={backgroundColor} disabled={disabled} {...props}>
+    <StyledRadioButton
+      backgroundColor={backgroundColor}
+      disabled={disabled}
+      {...props}
+    >
       {/* Add your RadioButton implementation */}
     </StyledRadioButton>
   );

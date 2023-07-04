@@ -4,7 +4,12 @@ import HeroImage from "./HeroImage";
 
 describe("HeroImage Component", () => {
   test("should be visible", () => {
-    render(<HeroImage imageUrl="https://example.com/image.jpg" altText="Example Image" />);
+    render(
+      <HeroImage
+        imageUrl="https://example.com/image.jpg"
+        altText="Example Image"
+      />,
+    );
     const imageElement = screen.getByAltText("Example Image");
     expect(imageElement).toBeInTheDocument();
   });
@@ -16,7 +21,7 @@ describe("HeroImage Component", () => {
         altText="Example Image"
         disabled
         backgroundColor="#cccccc"
-      />
+      />,
     );
     const imageElement = screen.getByAltText("Example Image");
     expect(imageElement).toHaveStyle("background-color: #cccccc");

@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { HeroImageProps } from "./HeroImage.types";
 
-
-
 const StyledHeroImage = styled.img<HeroImageProps>`
   width: 100%;
   height: auto;

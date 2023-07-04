@@ -17,9 +17,7 @@ export const Default: Story = (args) => (
 Default.args = {
   disabled: false,
   text: "Default Text",
-
 };
-
 
 export const Disabled: Story = (args) => (
   <Text data-testId="InputField-id" {...args} />

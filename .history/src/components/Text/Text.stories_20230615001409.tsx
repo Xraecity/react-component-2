@@ -19,7 +19,6 @@ Primary.args = {
   text: "Primary",
 };
 
-
 export const Disabled: Story = (args) => (
   <Text data-testId="InputField-id" {...args} />
 );

@@ -16,7 +16,8 @@ const StyledImage = styled.img<StyledImageProps>`
 `;
 
 const StyledWrapper = styled.div<StyledImageProps>`
-  background-color: ${(props) => (props.disabled ? "#cccccc" : props.backgroundColor)};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,12 +30,11 @@ const Image: React.FC<ImageProps> = ({
   disabled,
 }) => {
   return (
-    <StyledWrapper backgroundColor={backgroundColor} data-testid="image-wrapper">
-      <StyledImage
-        src={imageUrl}
-        alt={altText}
-        disabled={disabled}
-      />
+    <StyledWrapper
+      backgroundColor={backgroundColor}
+      data-testid="image-wrapper"
+    >
+      <StyledImage src={imageUrl} alt={altText} disabled={disabled} />
     </StyledWrapper>
   );
 };

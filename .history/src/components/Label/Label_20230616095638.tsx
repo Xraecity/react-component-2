@@ -11,8 +11,9 @@ const StyledLabel = styled.label<LabelProps>`
   font-weight: bold;
   border-radius: 3px;
   display: inline-block;
-  color: ${(props) => (props? "#ffffff" : "#ffffff")};
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
+  color: ${(props) => (props ? "#ffffff" : "#ffffff")};
+  background-color: ${(props) =>
+    props.disabled ? "#cccccc" : props.backgroundColor};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
 `;
@@ -22,8 +23,8 @@ const Label: React.FC<LabelProps> = ({
   text,
   disabled,
   backgroundColor,
-   ...props
-  }) => {
+  ...props
+}) => {
   return (
     <StyledLabel disabled={disabled} {...props}>
       {children}
