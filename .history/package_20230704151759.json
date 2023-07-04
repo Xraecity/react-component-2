@@ -19,9 +19,6 @@
       "pre-commit": "lint staged"
     }
   },
-  "lint-staged": {
-    "*": "prettier --write"
-  },
   "author": "Maryam Gambo",
   "license": "ISC",
   "devDependencies": {
