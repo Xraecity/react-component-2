@@ -43,6 +43,8 @@ const Button: React.FC<ButtonProps> = ({
   backgroundColor,
   ...props
 }) => {
+  // Introduce a linting error by using an undefined variable
+  const invalidVariable = undefined;
   return (
     <StyledButton
       type="button"
