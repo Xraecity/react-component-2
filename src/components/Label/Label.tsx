@@ -11,11 +11,15 @@ const StyledLabel = styled.label<LabelProps>`
   border-radius: 3px;
   display: inline-block;
   padding: '100px';
-  color: ${(props) => (props ? '#ffffff' : '#ffffff')};
+  color: ${(props) => (props != null ? '#ffffff' : '#ffffff')};
   background-color: ${(props) =>
-    props.disabled ? '#cccccc' : props.backgroundColor};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-  pointer-events: ${(props) => (props.disabled ? 'none' : 'auto')};
+    props.disabled !== undefined && props.disabled
+      ? '#cccccc'
+      : props.backgroundColor};
+  cursor: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'not-allowed' : 'pointer'};
+  pointer-events: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'none' : 'auto'};
 `;
 
 const Label: React.FC<LabelProps> = ({

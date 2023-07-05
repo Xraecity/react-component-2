@@ -10,16 +10,23 @@ interface StyledImageProps {
 const StyledImage = styled.img<StyledImageProps>`
   width: 90%;
   height: auto;
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'default')};
-  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  pointer-events: ${(props) => (props.disabled ? 'none' : 'auto')};
+  cursor: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'not-allowed' : 'default'};
+  opacity: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 0.5 : 1};
+  pointer-events: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'none' : 'auto'};
   background-color: ${(props) =>
-    props.disabled ? '#cccccc' : props.backgroundColor};
+    props.disabled !== undefined && props.disabled
+      ? '#cccccc'
+      : props.backgroundColor};
 `;
 
 const StyledWrapper = styled.div<StyledImageProps>`
   background-color: ${(props) =>
-    props.disabled ? '#cccccc' : props.backgroundColor};
+    props.disabled !== undefined && props.disabled
+      ? '#cccccc'
+      : props.backgroundColor};
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -44,7 +51,9 @@ const Image: React.FC<ImageProps> = ({
       backgroundColor={backgroundColor}
       data-testid="image-wrapper"
     >
-      {headerText && <HeaderText>{headerText}</HeaderText>}
+      {headerText !== undefined && headerText !== '' && (
+        <HeaderText>{headerText}</HeaderText>
+      )}
       <StyledImage
         src={imageUrl}
         alt={altText}

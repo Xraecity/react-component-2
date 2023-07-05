@@ -54,9 +54,7 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "types": "dist/index.d.ts",
   "dependencies": {
     "husky": "^8.0.3"

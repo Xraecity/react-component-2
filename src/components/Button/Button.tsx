@@ -17,14 +17,19 @@ const StyledButton = styled.button<ButtonProps>`
       : props.size === 'medium'
       ? '9px 30px 11px'
       : '14px 30px 16px'};
-  color: ${(props) => (props ? '#ffffff' : '#ffffff')};
+  color: ${(props) => (props != null ? '#ffffff' : '#ffffff')};
   background-color: ${(props) =>
-    props.disabled ? '#cccccc' : props.backgroundColor};
-  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-  pointer-events: ${(props) => (props.disabled ? 'none' : 'auto')};
+    props.disabled !== undefined && props.disabled
+      ? '#cccccc'
+      : props.backgroundColor};
+  opacity: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 0.5 : 1};
+  cursor: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'not-allowed' : 'pointer'};
+  pointer-events: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'none' : 'auto'};
   &:hover {
-    background-color: ${(props) => (props ? '#55bd90' : '#6bedb5')};
+    background-color: ${(props) => (props != null ? '#55bd90' : '#6bedb5')};
   }
   &:active {
     border: solid 2px #1b116e;

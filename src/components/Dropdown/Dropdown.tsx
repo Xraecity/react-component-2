@@ -8,11 +8,16 @@ const StyledDropdown = styled.select<DropdownProps>`
   border-radius: 4px;
   border: 1px solid #ccc;
   color: #000;
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+  cursor: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'not-allowed' : 'pointer'};
+  opacity: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 0.5 : 1};
   background-color: ${(props) =>
-    props.disabled ? '#cccccc' : props.backgroundColor};
-  pointer-events: ${(props) => (props.disabled ? 'none' : 'auto')};
+    props.disabled !== undefined && props.disabled
+      ? '#cccccc'
+      : props.backgroundColor};
+  pointer-events: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'none' : 'auto'};
 `;
 
 const Dropdown: React.FC<DropdownProps> = (props) => {

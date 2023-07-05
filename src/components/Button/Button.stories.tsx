@@ -1,10 +1,10 @@
-import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
-import Button from "./Button";
+import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import Button from './Button';
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  title: "Marbella/Button",
+  title: 'Marbella/Button',
   argTypes: {},
 };
 export default meta;
@@ -16,18 +16,16 @@ export const Default: Story = (args) => (
 );
 Default.args = {
   disabled: false,
-  label: "Primary",
-  backgroundColor: "#55bd80",
-
+  label: 'Primary',
+  backgroundColor: '#55bd80',
 };
-
 
 export const Disabled: Story = (args) => (
   <Button data-testId="InputField-id" {...args} />
 );
 Disabled.args = {
   disabled: true,
-  label: "Disabled",
+  label: 'Disabled',
 };
 
 export const Small: Story = (args) => (
@@ -35,8 +33,8 @@ export const Small: Story = (args) => (
 );
 Small.args = {
   disabled: false,
-  size: "small",
-  label: "Small",
+  size: 'small',
+  label: 'Small',
 };
 
 export const Medium: Story = (args) => (
@@ -44,8 +42,8 @@ export const Medium: Story = (args) => (
 );
 Medium.args = {
   disabled: false,
-  size: "medium",
-  label: "Medium",
+  size: 'medium',
+  label: 'Medium',
 };
 
 export const Large: Story = (args) => (
@@ -53,6 +51,6 @@ export const Large: Story = (args) => (
 );
 Large.args = {
   disabled: false,
-  size: "large",
-  label: "Large",
+  size: 'large',
+  label: 'Large',
 };

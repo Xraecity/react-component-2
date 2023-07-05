@@ -1,10 +1,10 @@
-import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
-import Text from "./Text";
+import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import Text from './Text';
 
 const meta: Meta<typeof Text> = {
   component: Text,
-  title: "Marbella/Text",
+  title: 'Marbella/Text',
   argTypes: {},
 };
 export default meta;
@@ -16,19 +16,16 @@ export const Default: Story = (args) => (
 );
 Default.args = {
   disabled: false,
-  text: "Default Text",
-  backgroundColor: "#55bd90",
+  text: 'Default Text',
+  backgroundColor: '#55bd90',
 };
-
-
-
 
 export const Disabled: Story = (args) => (
   <Text data-testId="InputField-id" {...args} />
 );
 Disabled.args = {
   disabled: true,
-  text: "Disabled",
+  text: 'Disabled',
 };
 
 export const Small: Story = (args) => (
@@ -36,8 +33,8 @@ export const Small: Story = (args) => (
 );
 Small.args = {
   disabled: false,
-  size: "small",
-  text: "Small",
+  size: 'small',
+  text: 'Small',
 };
 
 export const Medium: Story = (args) => (
@@ -45,8 +42,8 @@ export const Medium: Story = (args) => (
 );
 Medium.args = {
   disabled: false,
-  size: "medium",
-  text: "Medium",
+  size: 'medium',
+  text: 'Medium',
 };
 
 export const Large: Story = (args) => (
@@ -54,7 +51,6 @@ export const Large: Story = (args) => (
 );
 Large.args = {
   disabled: false,
-  size: "large",
-  text: "Large",
-
+  size: 'large',
+  text: 'Large',
 };

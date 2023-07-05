@@ -30,7 +30,6 @@
     "@storybook/react-webpack5": "^7.0.20",
     "@storybook/testing-library": "^0.0.14-next.2",
 
-
     "@types/react": "^18.2.12",
     "@types/storybook__react": "^5.2.1",
     "@types/styled-components": "^5.1.26",
@@ -51,8 +50,6 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "types": "dist/index.d.ts"
 }

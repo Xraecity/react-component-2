@@ -1,10 +1,10 @@
-import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
-import Dropdown from "./Dropdown";
+import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import Dropdown from './Dropdown';
 
 const meta: Meta<typeof Dropdown> = {
   component: Dropdown,
-  title: "Marbella/Dropdown",
+  title: 'Marbella/Dropdown',
   argTypes: {},
 };
 
@@ -18,12 +18,12 @@ export const Default: DropdownStory = (args) => (
 
 Default.args = {
   options: [
-    { value: "option1", label: "Option 1" },
-    { value: "option2", label: "Option 2" },
-    { value: "option3", label: "Option 3" },
+    { value: 'option1', label: 'Option 1' },
+    { value: 'option2', label: 'Option 2' },
+    { value: 'option3', label: 'Option 3' },
   ],
-  defaultValue: "option1",
-  backgroundColor: "#55bd90",
+  defaultValue: 'option1',
+  backgroundColor: '#55bd90',
   disabled: false,
 };
 
@@ -33,10 +33,10 @@ export const Disabled: DropdownStory = (args) => (
 
 Disabled.args = {
   options: [
-    { value: "option1", label: "Option 1" },
-    { value: "option2", label: "Option 2" },
-    { value: "option3", label: "Option 3" },
+    { value: 'option1', label: 'Option 1' },
+    { value: 'option2', label: 'Option 2' },
+    { value: 'option3', label: 'Option 3' },
   ],
-  defaultValue: "option1",
+  defaultValue: 'option1',
   disabled: true,
 };

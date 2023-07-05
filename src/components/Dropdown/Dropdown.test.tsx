@@ -5,7 +5,6 @@ import '@testing-library/jest-dom';
 import Dropdown from './Dropdown';
 
 describe('Tests for Dropdown component', () => {
-
   test('Dropdown should be visible', () => {
     const options = [
       { value: 'option1', label: 'Option 1' },
@@ -23,11 +22,11 @@ describe('Tests for Dropdown component', () => {
       { value: 'option2', label: 'Option 2' },
     ];
 
-    const { container } = render(<Dropdown options={options} defaultValue='Option 1' disabled />);
+    const { container } = render(
+      <Dropdown options={options} defaultValue="Option 1" disabled />,
+    );
     const dropdown = container.firstChild as HTMLElement;
-
 
     expect(dropdown).toHaveStyle('background-color: #cccccc');
   });
-
 });

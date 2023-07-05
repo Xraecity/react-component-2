@@ -11,15 +11,22 @@ const StyledHeroImage = styled.img<StyledHeroImageProps>`
   width: 90%;
   height: auto;
   background-color: ${(props) =>
-    props.disabled ? '#cccccc' : props.backgroundColor};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'default')};
-  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  pointer-events: ${(props) => (props.disabled ? 'none' : 'auto')};
+    props.disabled !== undefined && props.disabled
+      ? '#cccccc'
+      : props.backgroundColor};
+  cursor: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'not-allowed' : 'default'};
+  opacity: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 0.5 : 1};
+  pointer-events: ${(props) =>
+    props.disabled !== undefined && props.disabled ? 'none' : 'auto'};
 `;
 
 const StyledWrapper = styled.div<StyledHeroImageProps>`
   background-color: ${(props) =>
-    props.disabled ? '#cccccc' : props.backgroundColor};
+    props.disabled !== undefined && props.disabled
+      ? '#cccccc'
+      : props.backgroundColor};
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -44,7 +51,9 @@ const HeroImage: React.FC<HeroImageProps> = ({
       backgroundColor={backgroundColor}
       data-testid="hero-image-wrapper"
     >
-      {headerText && <HeaderText>{headerText}</HeaderText>}
+      {headerText !== undefined && headerText !== '' && (
+        <HeaderText>{headerText}</HeaderText>
+      )}
       <StyledHeroImage
         src={imageUrl}
         alt={altText}

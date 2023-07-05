@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "pre-commit": "npm run lint && npm run test"
   },
-  "husky":{
+  "husky": {
     "hooks": {
       "pre-commit": "npm run pre-commit"
     }
@@ -75,8 +75,6 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "types": "dist/index.d.ts"
 }

@@ -12,9 +12,7 @@ describe('Tests for Button component', () => {
   });
 
   test('Button should change background color when disabled', () => {
-    const { getByText } = render(
-      <Button label="Test Button" disabled />
-    );
+    const { getByText } = render(<Button label="Test Button" disabled />);
     const buttonElement = getByText('Test Button');
     expect(buttonElement).toHaveStyle('background-color: #cccccc');
   });
