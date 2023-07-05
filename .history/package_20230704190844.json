@@ -10,11 +10,6 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "prettier": "prettier --write .",
-    "prepare": "husky install"
-
   },
   "husky": {
     "hooks": {
@@ -23,8 +18,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,json,css,scss,md}": [
-      "npm run prettier",
-      "npm run lint:fix",
+      "prettier --write",
+      "eslint --fix",
       "git add"
     ]
   },

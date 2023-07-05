@@ -12,20 +12,19 @@
     "build-storybook": "storybook build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prettier": "prettier --write .",
-    "prepare": "husky install"
-
+    "lint-staged": "lint-staged --config lint-staged.js",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run test"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{js,jsx,json,css,scss,md}": [
-      "npm run prettier",
-      "npm run lint:fix",
-      "git add"
+    "*": [
+      "prettier --write",
+      "eslint --fix",
+      "jest --bail --findRelatedTests"
     ]
   },
   "author": "Maryam Gambo",
