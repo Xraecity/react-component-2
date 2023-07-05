@@ -9,6 +9,7 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
+<<<<<<< HEAD
     "build-storybook": "storybook build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -20,6 +21,9 @@
     "hooks": {
       "pre-commit": "lint-staged && npm run test"
     }
+=======
+    "build-storybook": "storybook build"
+>>>>>>> parent of 87130e1 (Installed Eslint, prettier and husky to add pre-commit checks to code)
   },
   "lint-staged": {
     "*.{js,jsx,json,css,scss,md}": [
@@ -53,6 +57,7 @@
     "@types/react": "^18.2.12",
     "@types/storybook__react": "^5.2.1",
     "@types/styled-components": "^5.1.26",
+<<<<<<< HEAD
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "babel-jest": "^29.5.0",
     "eslint": "^8.44.0",
@@ -69,6 +74,12 @@
     "jest-styled-components": "^7.1.1",
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
+=======
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jest-styled-components": "^7.1.1",
+>>>>>>> parent of 87130e1 (Installed Eslint, prettier and husky to add pre-commit checks to code)
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -77,8 +88,12 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^7.0.20",
     "styled-components": "^5.3.10",
+<<<<<<< HEAD
     "tsc-files": "^1.1.4",
     "typescript": "^5.1.6"
+=======
+    "typescript": "^5.1.3"
+>>>>>>> parent of 87130e1 (Installed Eslint, prettier and husky to add pre-commit checks to code)
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -89,9 +104,13 @@
   "files": [
     "dist"
   ],
+<<<<<<< HEAD
   "types": "dist/index.d.ts",
   "dependencies": {
     "@typescript-eslint/parser": "^5.61.0",
     "eslint-import-resolver-typescript": "^3.5.5"
   }
+=======
+  "types": "dist/index.d.ts"
+>>>>>>> parent of 87130e1 (Installed Eslint, prettier and husky to add pre-commit checks to code)
 }

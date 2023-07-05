@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { type TableProps } from "./Table.types";
+import { TableProps } from "./Table.types";
+
+
 
 const StyledTable = styled.table<TableProps>`
   width: 50%;
@@ -15,8 +17,7 @@ const StyledTable = styled.table<TableProps>`
     props.disabled ? "#cccccc" : props.backgroundColor};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "default")};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  background-color: ${(props) =>
-    props.disabled ? "#cccccc" : props.backgroundColor};
+  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
 `;
 
@@ -52,10 +53,10 @@ const Table: React.FC<TableProps> = ({
   disabled,
 }) => {
   return (
-    <StyledTable backgroundColor={backgroundColor} disabled={disabled ?? false}>
+    <StyledTable backgroundColor={backgroundColor} disabled={disabled}>
       {header && <TableHeader header={header} />}
       <tbody>
-        {rows != null &&
+        {rows &&
           rows.map((row, index) => <TableRow key={index} cells={row.cells} />)}
       </tbody>
       {footer && <TableFooter footer={footer} />}

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { type ImageProps } from "./Image.types";
+import { ImageProps } from "./Image.types";
 
 interface StyledImageProps {
   disabled?: boolean;
@@ -13,13 +13,11 @@ const StyledImage = styled.img<StyledImageProps>`
   cursor: ${(props) => (props.disabled ? "not-allowed" : "default")};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
-  background-color: ${(props) =>
-    props.disabled ? "#cccccc" : props.backgroundColor};
+  background-color: ${(props) => (props.disabled ? "#cccccc" : props.backgroundColor)};
 `;
 
 const StyledWrapper = styled.div<StyledImageProps>`
-  background-color: ${(props) =>
-    props.disabled ? "#cccccc" : props.backgroundColor};
+  background-color: ${(props) => (props.disabled ? "#cccccc" : props.backgroundColor)};
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -40,16 +38,14 @@ const Image: React.FC<ImageProps> = ({
   headerText,
 }) => {
   return (
-    <StyledWrapper
-      backgroundColor={backgroundColor}
-      data-testid="image-wrapper"
-    >
-      {headerText && <HeaderText>{headerText}</HeaderText>}
+
+    <StyledWrapper backgroundColor={backgroundColor} data-testid="image-wrapper">
+       {headerText && <HeaderText>{headerText}</HeaderText>}
       <StyledImage
         src={imageUrl}
         alt={altText}
         backgroundColor={backgroundColor}
-        disabled={disabled ?? false}
+        disabled={disabled}
       />
     </StyledWrapper>
   );

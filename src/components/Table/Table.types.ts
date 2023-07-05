@@ -4,6 +4,7 @@ export interface TableProps {
   footer?: string;
   backgroundColor?: string;
   disabled?: boolean;
+
 }
 
 export interface TableRowProps {

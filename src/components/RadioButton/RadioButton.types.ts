@@ -1,5 +1,5 @@
 export interface RadioButtonProps {
   backgroundColor?: string;
-  text?: string;
+  text?:string;
   disabled?: boolean;
 }

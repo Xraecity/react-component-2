@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { type HeroImageProps } from "./HeroImage.types";
+import { HeroImageProps } from "./HeroImage.types";
 
 interface StyledHeroImageProps {
   disabled?: boolean;
@@ -18,8 +18,7 @@ const StyledHeroImage = styled.img<StyledHeroImageProps>`
 `;
 
 const StyledWrapper = styled.div<StyledHeroImageProps>`
-  background-color: ${(props) =>
-    props.disabled ? "#cccccc" : props.backgroundColor};
+  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -37,21 +36,18 @@ const HeroImage: React.FC<HeroImageProps> = ({
   altText,
   backgroundColor,
   disabled,
-  headerText,
+  headerText
 }) => {
   return (
-    <StyledWrapper
-      backgroundColor={backgroundColor}
-      data-testid="hero-image-wrapper"
-    >
+    <StyledWrapper backgroundColor={backgroundColor} data-testid="hero-image-wrapper">
       {headerText && <HeaderText>{headerText}</HeaderText>}
-      <StyledHeroImage
-        src={imageUrl}
-        alt={altText}
-        backgroundColor={backgroundColor}
-        disabled={disabled ?? false}
-      />
-    </StyledWrapper>
+    <StyledHeroImage
+      src={imageUrl}
+      alt={altText}
+      backgroundColor={backgroundColor}
+      disabled={disabled}
+    />
+  </StyledWrapper>
   );
 };
 

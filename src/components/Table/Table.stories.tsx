@@ -25,6 +25,7 @@ Default.args = {
   backgroundColor: "#55bd90",
 };
 
+
 export const Disabled: Story = (args) => (
   <Table data-testId="InputField-id" {...args} />
 );
@@ -32,3 +33,4 @@ Disabled.args = {
   ...Default.args,
   disabled: true,
 };
+

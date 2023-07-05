@@ -3,5 +3,5 @@ export interface ImageProps {
   altText: string;
   backgroundColor?: string;
   disabled?: boolean;
-  headerText?: string;
+  headerText?:string;
 }
