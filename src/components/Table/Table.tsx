@@ -1,8 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { TableProps } from "./Table.types";
-
-
+import React from 'react';
+import styled from 'styled-components';
+import { type TableProps } from './Table.types';
 
 const StyledTable = styled.table<TableProps>`
   width: 50%;
@@ -14,11 +12,12 @@ const StyledTable = styled.table<TableProps>`
     padding: 8px;
   }
   background-color: ${(props) =>
-    props.disabled ? "#cccccc" : props.backgroundColor};
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "default")};
+    props.disabled ? '#cccccc' : props.backgroundColor};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'default')};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor)};
-  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
+  background-color: ${(props) =>
+    props.disabled ? '#cccccc' : props.backgroundColor};
+  pointer-events: ${(props) => (props.disabled ? 'none' : 'auto')};
 `;
 
 const TableHeader: React.FC<{ header?: string }> = ({ header }) => (
@@ -56,7 +55,7 @@ const Table: React.FC<TableProps> = ({
     <StyledTable backgroundColor={backgroundColor} disabled={disabled}>
       {header && <TableHeader header={header} />}
       <tbody>
-        {rows &&
+        {rows != null &&
           rows.map((row, index) => <TableRow key={index} cells={row.cells} />)}
       </tbody>
       {footer && <TableFooter footer={footer} />}

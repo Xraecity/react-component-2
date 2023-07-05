@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { TextProps } from "./Text.types";
+import React from 'react';
+import styled from 'styled-components';
+import { type TextProps } from './Text.types';
 
 const StyledSpan = styled.span<TextProps>`
   border: 0;
@@ -12,15 +12,16 @@ const StyledSpan = styled.span<TextProps>`
   border-radius: 3px;
   display: inline-block;
   padding: ${(props) =>
-    props.size === "small"
-      ? "7px 25px 8px"
-      : props.size === "medium"
-      ? "9px 30px 11px"
-      : "14px 30px 16px"};
-  background-color: ${(props) => ( props.disabled ? "#cccccc" : props.backgroundColor )};
+    props.size === 'small'
+      ? '7px 25px 8px'
+      : props.size === 'medium'
+      ? '9px 30px 11px'
+      : '14px 30px 16px'};
+  background-color: ${(props) =>
+    props.disabled ? '#cccccc' : props.backgroundColor};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  pointer-events: ${(props) => (props.disabled ? 'none' : 'auto')};
 `;
 
 const Text: React.FC<TextProps> = ({
@@ -35,7 +36,8 @@ const Text: React.FC<TextProps> = ({
       disabled={disabled}
       size={size}
       backgroundColor={backgroundColor}
-      {...props}>
+      {...props}
+    >
       {text}
     </StyledSpan>
   );
