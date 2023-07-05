@@ -3,7 +3,7 @@ name: Code Checks
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   code_checks:
@@ -23,5 +23,11 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+        
+      - name: Run Prettier
+        run: npx prettier --check .
+
+      - name: Run Jest tests
+        run: npm test
 
  
