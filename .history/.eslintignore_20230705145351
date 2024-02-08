@@ -1,8 +1,0 @@
-dist/
-node_modules
-src/**/*.test.tsx
-src/**/*.stories.tsx
-.history
-jest.config.js
-babel.config.js
-src/stories
