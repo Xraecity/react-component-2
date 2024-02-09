@@ -1,6 +1,6 @@
 # React-Component-Library
 
-> - Clone the git repository: https://github.com/xraecity/React-Component-Library.git
+> - Clone the git repository: https://github.com/xraecity/React-Component-2.git
 > - Navigate to the folder where the repository is saved on your command line
 > - run the command "npm install"
 
